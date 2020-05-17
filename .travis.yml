@@ -8,6 +8,7 @@ matrix:
       osx_image: xcode11.4
 
 before_install:
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - brew update
   - brew tap ryangraham/credz git@github.com:ryangraham/homebrew-credz
 
