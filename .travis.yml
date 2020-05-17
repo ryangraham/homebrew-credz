@@ -12,7 +12,7 @@ matrix:
 
 before_install:
   - brew update
-  - brew tap rgraham/credz
+  - brew tap ryangraham/credz git@github.com:ryangraham/homebrew-credz
 
 script:
   - uname -a ; sw_vers ; $CXX --version
