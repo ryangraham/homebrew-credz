@@ -9,6 +9,5 @@ matrix:
 
 script:
   - uname -a ; sw_vers ; $CXX --version
-  - brew audit ./credz.rb
   - brew install ./credz.rb
   - brew test ./credz.rb
