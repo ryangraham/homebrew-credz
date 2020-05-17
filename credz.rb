@@ -13,10 +13,13 @@ class Credz < Formula
   depends_on 'nlohmann/json/nlohmann_json'
 
   def install
-    system 'make', 'install'
+    mkdir 'credz-build' do
+      system 'cmake', '..', *std_cmake_args
+      system 'make', 'install'
+    end
   end
 
   test do
-    system '/usr/local/bin/credz -v'
+    system "#{bin}/credz -v"
   end
 end
