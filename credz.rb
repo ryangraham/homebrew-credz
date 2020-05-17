@@ -13,9 +13,7 @@ class Credz < Formula
   depends_on 'nlohmann/json/nlohmann_json'
 
   def install
-    mkdir 'build' do
-      system 'make', 'install'
-    end
+    system 'make', 'install'
   end
 
   test do
